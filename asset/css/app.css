@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+    --width-logos: 52px;
+    --height-logos: 52px;
+    --border-radius-logos: 12px;
+    --border-frame: 3px solid black;
+    --color-black: black;
+}
+
+/* mise en place d'une font pour tout le site */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* mise en place d'un bandeau de même couleur que le bg de la pdp */
+header {
+    background: #ECF0F1;
+    height: 150px;
+    width: 50%;
+    margin: auto;
+}
+
+/* dimensionnement de la pdp */
+#pdp {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative; /* position relative pour que la photo puisse passer devant le corps */
+    top: 53px;
+}
+
+/* transformation du cadre de la photo en cercle */
+img {
+    border-radius:50%;
+}
+
+/* règlages du corps */
+#corps {
+    overflow: hidden; /* pour que la partie autre que celle du cercle servant de bordure basse à la pdp disparaisse */
+    width: 50%;
+    background: linear-gradient(orange, red); /* dégradé */
+    margin: auto;
+    height: 500px;
+    border: var(--border-frame);
+}
+
+/* règlages de la bordure de la photo */
+#pdp-border {
+    width: 206px;
+    height: 206px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: -103px;
+    border: var(--border-frame);
+}
+
+/* réglages h1 */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* réglages h2 */
+h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-block: 50px;
+}
+
+/* placement des logos */
+#logos {
+    display: flex;
+    justify-content: center;
+}
+
+/* utilisation du sprite pour les logos */
+#logo1 {
+    width: var(--width-logos);
+    height: var(--height-logos);
+    background: url("../img/360_F_577786813_2EV9bVDHDl05i4QL9AydIQYGylqLsn7h.jpg") -228px -287px;
+    border-radius: var(--border-radius-logos);
+}
+
+#logo2 {
+    width: var(--width-logos);
+    height: var(--height-logos);
+    background: url("../img/360_F_577786813_2EV9bVDHDl05i4QL9AydIQYGylqLsn7h.jpg") -89px -287px;
+    border-radius: var(--border-radius-logos);
+    margin-inline: 75px; /* espacement entre les logos */
+}
+
+#logo3 {
+    width: var(--width-logos);
+    height: var(--height-logos);
+    background: url("../img/360_F_577786813_2EV9bVDHDl05i4QL9AydIQYGylqLsn7h.jpg") -367px -287px;
+    border-radius: var(--border-radius-logos);
+}
+
+/* dispostion du bouton */
+#cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* dimensionnement du bouton */
+#bouton {
+    font-size: 16px;
+    font-weight: 900;
+    padding: 20px 15px;
+    border-radius: 8px;
+    border: 0px solid var(--color-black);
+    background: var(--color-black);
+    color: white;
+}

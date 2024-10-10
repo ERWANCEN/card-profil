@@ -48,7 +48,7 @@ img {
     background: linear-gradient(orange, red); /* dégradé */
     margin: auto;
     height: 500px;
-    border: var(--border-frame);
+    border-top: var(--border-frame); /* bordure uniquement sur le bord haut du corps
 }
 
 /* règlages de la bordure de la photo */
